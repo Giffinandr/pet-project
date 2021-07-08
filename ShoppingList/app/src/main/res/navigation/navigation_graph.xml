@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/lists_fragment">
+
+    <fragment
+        android:id="@+id/lists_fragment"
+        android:name="com.hfad.shoppinglist.activitys.ListsFragment"
+        android:label="fragment_lists"
+        tools:layout="@layout/fragment_lists">
+        <argument
+            android:name="nameList"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_lists_fragment_to_createListFragment"
+            app:destination="@id/createListFragment" />
+        <action
+            android:id="@+id/action_lists_fragment_to_edit_list_fragment"
+            app:destination="@id/edit_list_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/shopping_fragment"
+        android:name="com.hfad.shoppinglist.activitys.ShoppingFragment"
+        android:label="fragment_shopping"
+        tools:layout="@layout/fragment_shopping" />
+    <fragment
+        android:id="@+id/trash_fragment"
+        android:name="com.hfad.shoppinglist.activitys.TrashFragment"
+        android:label="fragment_trash"
+        tools:layout="@layout/fragment_trash" >
+        <argument
+            android:name="argument"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/edit_list_fragment"
+        android:name="com.hfad.shoppinglist.activitys.EditListFragment"
+        android:label="fragment_edit_list"
+        tools:layout="@layout/fragment_edit_list" >
+        <action
+            android:id="@+id/action_edit_list_fragment_to_createListFragment"
+            app:destination="@id/createListFragment"
+            app:popUpTo="@id/edit_list_fragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/createListFragment"
+        android:name="com.hfad.shoppinglist.activitys.CreateListFragment"
+        android:label="fragment_create_list"
+        tools:layout="@layout/fragment_create_list" >
+        <action
+            android:id="@+id/action_createListFragment_to_edit_list_fragment"
+            app:destination="@id/edit_list_fragment"
+            app:popUpTo="@id/createListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

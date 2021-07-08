@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Shopping List</string>
+    <string name="item_buy">Name buy</string>
+
+    <string name="shopping_lists">Lists</string>
+    <string name="edit_list">Edit list</string>
+    <string name="in_shop">At the shop</string>
+    <string name="trash">Trash</string>
+
+    <!-- Hints -->
+    <string name="create_buy_hint">Add new item to buy</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
